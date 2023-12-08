@@ -1,0 +1,69 @@
+openapi: 3.0.1
+info:
+  title: Test Comparuua API definition
+  description: API contains operation to demonstrative Hryhorii Yershov programming skills
+  version: '1.0'
+servers:
+  - url: http://localhost:7000/api/v1
+    description: Sample server url
+paths:
+  /users:
+    get:
+      tags:
+        - Users
+      operationId: getUsers
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserDto'
+        '400':
+          $ref: '#/components/responses/BadRequestError'
+components:
+  schemas:
+    UserDto:
+      type: object
+      required:
+        - id
+        - username
+        - name
+        - surname
+      properties:
+        id:
+          type: string
+        username:
+          type: string
+        name:
+          type: string
+        surname:
+          type: string
+    ErrorResponse:
+      type: object
+      required:
+        - timestamp
+        - status
+        - error
+        - message
+        - path
+      properties:
+        timestamp:
+          type: string
+        status:
+          type: integer
+        error:
+          type: string
+        message:
+          type: string
+        path:
+          type: string
+  responses:
+    BadRequestError:
+      description: Error in request processing
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'

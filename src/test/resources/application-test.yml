@@ -1,0 +1,24 @@
+core:
+  data-sources:
+    - name: data-base-1-test
+      strategy: postgres
+      url: jdbc:postgresql://localhost:5433/data-base-1-test
+      table: users
+      user: testuser
+      password: testpass
+      mapping:
+        id: user_id
+        username: login
+        name: first_name
+        surname: last_name
+    - name: data-base-2-test
+      strategy: postgres
+      url: jdbc:postgresql://localhost:5434/data-base-2-test
+      table: user_table
+      user: testuser
+      password: testpass
+      mapping:
+        id: ldap_id
+        username: ldap_login
+        name: name
+        surname: surname
