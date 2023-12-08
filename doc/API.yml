@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Test Comparuua API definition
+  title: Test Comparus UA API definition
   description: API contains operation to demonstrative Hryhorii Yershov programming skills
   version: '1.0'
 servers:
