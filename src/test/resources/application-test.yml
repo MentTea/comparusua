@@ -18,7 +18,7 @@ core:
       user: testuser
       password: testpass
       mapping:
-        id: ldap_id
+        id: ldap_login
         username: ldap_login
         name: name
         surname: surname
