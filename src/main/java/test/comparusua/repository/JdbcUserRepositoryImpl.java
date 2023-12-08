@@ -46,6 +46,7 @@ public class JdbcUserRepositoryImpl implements UserRepository {
 
     private String buildSqlQuery(DataSourceInfo dataSourceInfo) {
         val selectFields = new StringBuilder();
+
         for (Map.Entry<String, String> entry : dataSourceInfo.getMapping().entrySet()) {
             selectFields.append(entry.getValue()).append(AS).append(entry.getKey()).append(COMA_AND_SPACE);
         }

@@ -5,7 +5,9 @@ import test.comparusua.api.model.UserDto;
 import test.comparusua.config.property.DataSourceInfo;
 import test.comparusua.model.User;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 
@@ -14,6 +16,26 @@ public class StubModelHelper {
     private static final Integer LENGTH_TO_RANDOM = 10;
 
     private StubModelHelper() {
+    }
+
+    public static DataSourceInfo stubDataSourceInfo() {
+        val dataSourceInfo = new DataSourceInfo();
+        dataSourceInfo.setName(randomAlphabetic(LENGTH_TO_RANDOM));
+        dataSourceInfo.setStrategy(randomAlphabetic(LENGTH_TO_RANDOM));
+        dataSourceInfo.setUrl(randomAlphabetic(LENGTH_TO_RANDOM));
+        dataSourceInfo.setTable(randomAlphabetic(LENGTH_TO_RANDOM));
+        dataSourceInfo.setUser(randomAlphabetic(LENGTH_TO_RANDOM));
+        dataSourceInfo.setPassword(randomAlphabetic(LENGTH_TO_RANDOM));
+
+        Map<String, String> mapping = new HashMap<>();
+        mapping.put("id", randomAlphabetic(LENGTH_TO_RANDOM));
+        mapping.put("username", randomAlphabetic(LENGTH_TO_RANDOM));
+        mapping.put("name", randomAlphabetic(LENGTH_TO_RANDOM));
+        mapping.put("surname", randomAlphabetic(LENGTH_TO_RANDOM));
+
+        dataSourceInfo.setMapping(mapping);
+
+        return dataSourceInfo;
     }
 
     public static List<User> stubUsers() {

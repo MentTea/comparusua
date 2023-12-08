@@ -2,7 +2,7 @@ package test.comparusua.config.property;
 
 import lombok.Data;
 
-import java.util.HashMap;
+import java.util.Map;
 
 @Data
 public class DataSourceInfo {
@@ -13,5 +13,5 @@ public class DataSourceInfo {
     private String table;
     private String user;
     private String password;
-    private HashMap<String, String> mapping;
+    private Map<String, String> mapping;
 }

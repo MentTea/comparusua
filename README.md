@@ -1,4 +1,5 @@
 # COMPARUS UA Test Project: Done by Hryhorii Yershov
+
 ### 1.0.0
 
 Result of working:
