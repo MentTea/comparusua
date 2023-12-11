@@ -2,6 +2,10 @@
 
 ### 1.0.0
 
+Test task for Java candidate:
+
+[Test task](doc/test_task.pdf)
+
 Result of working:
 
 ![result_dev_check.png](screens/result_dev_check.png)
